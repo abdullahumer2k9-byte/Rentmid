@@ -4,202 +4,325 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Features — RentMid Property Management Software</title>
-<meta name="description" content="Rent collection, lease management, maintenance tracking, tenant portal, financial reporting, and tenant screening — everything a 20–200 unit landlord needs, in one system.">
+<meta name="description" content="Rent collection, maintenance tracking, lease management, tenant portal, financial reporting, and tenant screening — every RentMid feature, in detail.">
+<link rel="canonical" href="features.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <svg class="logo-mark" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-        <rect class="void" width="30" height="30" rx="6"/>
-        <rect x="4" y="4" width="6" height="6"/><rect x="12" y="4" width="6" height="6"/><rect x="20" y="4" width="6" height="6"/>
-        <rect x="4" y="12" width="6" height="6"/><rect x="20" y="12" width="6" height="6"/>
-        <rect x="4" y="20" width="6" height="6"/><rect x="12" y="20" width="6" height="6"/><rect x="20" y="20" width="6" height="6"/>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="RentMid home">
+      <svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="15" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="1" y="15" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="15" y="15" width="10" height="10" rx="2" fill="var(--amber)"/>
       </svg>
-      RentMid
+      <span class="logo-text">Rent<strong>Mid</strong></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="features.html" class="active">Features</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="about.html">Why RentMid</a></li>
-      <li><a href="blog.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" aria-label="Toggle dark mode"></button>
-      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="features.html" class="active">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">Why RentMid</a>
+      <a href="blog.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</nav>
-
-<header class="page-hero">
-  <div class="dot-field" data-parallax="0.08"></div>
-  <div class="container reveal in">
-    <span class="eyebrow">Everything, in detail</span>
-    <h1>One system for the whole day-to-day.</h1>
-    <p class="lede">Scroll through the six jobs RentMid handles, then see the dashboard where they come together.</p>
   </div>
 </header>
 
-<!-- ============ HORIZONTAL SCROLL FEATURE SHOWCASE ============ -->
-<section class="hscroll-section" style="height: 420vh;">
-  <div class="hscroll-sticky">
-    <div class="hscroll-track">
+<main>
 
-      <article class="hscroll-card">
-        <span class="hscroll-num">Rent collection</span>
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg></div>
-        <h3>Rent Collection &amp; Payments</h3>
-        <p>Automated rent collection via ACH bank transfer or card, with reminders sent before every due date. Late payments are flagged automatically, late fees apply themselves, and follow-up workflows chase down what's owed &mdash; so managers aren't the ones sending the awkward text.</p>
-        <p>Every tenant has a full, searchable payment history, viewable per unit or rolled up across the whole property.</p>
-      </article>
-
-      <article class="hscroll-card">
-        <span class="hscroll-num">Leases &amp; documents</span>
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/><path d="M8.5 13h7M8.5 17h5"/></svg></div>
-        <h3>Lease &amp; Document Management</h3>
-        <p>Leases live in one digital library with renewal dates tracked automatically and reminders sent well before expiration &mdash; no more finding out a lease lapsed after the fact.</p>
-        <p>Lease templates and clauses are state-aware, starting with your launch state, and every signed lease, application, ID, and piece of correspondence has a secure home.</p>
-      </article>
-
-      <article class="hscroll-card">
-        <span class="hscroll-num">Maintenance</span>
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a1 1 0 0 0-1.4 0L4 15.6V20h4.4l9.3-9.3a1 1 0 0 0 0-1.4z"/><path d="M12.5 8.5l3 3"/></svg></div>
-        <h3>Maintenance Request Tracking</h3>
-        <p>Tenants submit requests through a portal, with photo or video attached, so managers see the problem before showing up. A manager-facing dashboard makes it easy to assign, prioritize, and track status across every open ticket.</p>
-        <p>Status updates go back to the tenant automatically, and every request keeps a timestamped history &mdash; useful documentation if a dispute ever comes up.</p>
-      </article>
-
-      <article class="hscroll-card">
-        <span class="hscroll-num">Tenant portal</span>
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 9h8M8 13h5"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>Tenant Communication Portal</h3>
-        <p>A single, centralized thread replaces the scattered mix of texts, emails, and phone calls most managers juggle across dozens of tenants.</p>
-        <p>Automated notifications cover the routine stuff &mdash; rent due, maintenance updates, lease renewals, general announcements &mdash; so tenants stay informed without a manager having to remember to tell them.</p>
-      </article>
-
-      <article class="hscroll-card">
-        <span class="hscroll-num">Financial reporting</span>
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V10M12 20V4M20 20v-7"/></svg></div>
-        <h3>Financial Reporting</h3>
-        <p>Income and expenses roll up per property and across the whole portfolio, with reports built to export cleanly for accounting, tax filing, and Schedule&nbsp;E preparation.</p>
-        <p>Simple dashboards show occupancy rate, rent collected versus outstanding, and maintenance spend at a glance &mdash; the numbers a manager actually checks day to day.</p>
-      </article>
-
-      <article class="hscroll-card">
-        <span class="hscroll-num">Screening</span>
-        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></div>
-        <h3>Tenant Screening Integration</h3>
-        <p>Background checks, credit checks, and eviction history run through third-party integrations such as TransUnion SmartMove or similar providers.</p>
-        <p>Digital rental applications feed straight into an automated screening workflow, so a prospective tenant can apply and get screened without a manager chasing down paperwork.</p>
-      </article>
-
-    </div>
-  </div>
-  <div class="hscroll-progress"><i class="active"></i><i></i><i></i><i></i><i></i><i></i></div>
-</section>
-
-<!-- ============ COMPLIANCE ============ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="grid grid-2" style="gap:60px; align-items:center;">
-      <div class="reveal">
-        <span class="eyebrow">Launch-state specific</span>
-        <h2>Built around the law, not around a generic checklist.</h2>
-        <p class="lede">Landlord-tenant law is set at the state level in the U.S. &mdash; and sometimes the city level. Security deposit limits, eviction procedures, and rent stabilization rules can all differ depending on where a property sits. RentMid is designed to expand state by state rather than claim nationwide compliance on day one.</p>
-        <ul class="price-list" style="margin-top:24px;">
-          <li>State-specific security deposit limits and return timelines</li>
-          <li>Fair Housing Act&ndash;aware application and screening workflows</li>
-          <li>Local rent control / rent stabilization tracking in applicable cities</li>
-        </ul>
-      </div>
-      <div class="card reveal-scale">
-        <div class="diag-lines"></div>
-        <h3>Why not claim nationwide compliance?</h3>
-        <p>Because it wouldn't be true. Rules for deposits, notices, and evictions vary by state and sometimes by city. RentMid launches deep in one state's rules first, then expands &mdash; rather than shipping a shallow, one-size-fits-all compliance layer.</p>
+  <section class="section" style="padding-bottom:48px;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Everything, in detail</span>
+        <h1 style="font-size:clamp(2rem,4vw,3rem);">Six systems. One login.</h1>
+        <p class="lede">Scroll through a quick tour, then read the specifics below — from how late fees are automated to how deposits are tracked by state.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ DASHBOARD MOCKUP PLACEHOLDER ============ -->
-<section class="section">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Under the hood</span>
-      <h2>The dashboard where it all comes together</h2>
+  <!-- HORIZONTAL SCROLL SHOWCASE -->
+  <section class="hscroll-section">
+    <div class="hscroll-sticky">
+      <div class="hscroll-heading container">
+        <span class="eyebrow">Scroll to explore →</span>
+      </div>
+      <div class="hscroll-track">
+
+        <article class="hscroll-panel">
+          <span class="panel-num">01 / RENT COLLECTION</span>
+          <div class="panel-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/></svg></div>
+          <h3>Rent Collection &amp; Payments</h3>
+          <p>ACH and card payments, automatic reminders, and late-fee automation with a full payment history per tenant.</p>
+        </article>
+
+        <article class="hscroll-panel">
+          <span class="panel-num">02 / MAINTENANCE</span>
+          <div class="panel-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8Z"/></svg></div>
+          <h3>Maintenance Requests</h3>
+          <p>Tenants submit with photos or video; managers assign, prioritize, and track status to close.</p>
+        </article>
+
+        <article class="hscroll-panel">
+          <span class="panel-num">03 / LEASES</span>
+          <div class="panel-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/></svg></div>
+          <h3>Lease &amp; Document Management</h3>
+          <p>Digital storage, renewal tracking, and state-aware templates for every signed lease.</p>
+        </article>
+
+        <article class="hscroll-panel">
+          <span class="panel-num">04 / TENANT PORTAL</span>
+          <div class="panel-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 1 1-4.4-7.4L21 3l-1.2 4.6"/></svg></div>
+          <h3>Tenant Communication</h3>
+          <p>One thread per tenant for messages, rent notices, and maintenance updates.</p>
+        </article>
+
+        <article class="hscroll-panel">
+          <span class="panel-num">05 / REPORTING</span>
+          <div class="panel-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M11 20V4M18 20v-7"/><path d="M2 20h20"/></svg></div>
+          <h3>Financial Reporting</h3>
+          <p>Per-property and portfolio dashboards, exportable for accounting and tax season.</p>
+        </article>
+
+        <article class="hscroll-panel">
+          <span class="panel-num">06 / SCREENING</span>
+          <div class="panel-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z"/></svg></div>
+          <h3>Tenant Screening</h3>
+          <p>Background, credit, and eviction-history checks through a third-party integration, built into the application flow.</p>
+        </article>
+
+      </div>
+      <div class="hscroll-scrub">RENTMID / FEATURES</div>
+      <div class="hscroll-progress"><div class="hscroll-progress-bar"></div></div>
     </div>
-    <div class="mockup-frame reveal-scale" style="margin-top:48px; max-width:920px; margin-left:auto; margin-right:auto;">
-      <div class="mockup-bar"><span></span><span></span><span></span></div>
-      <div class="mockup-body">
-        <svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg">
-          <rect x="0" y="0" width="520" height="280" fill="none"/>
-          <rect x="10" y="10" width="150" height="70" rx="8" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <rect x="170" y="10" width="150" height="70" rx="8" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <rect x="330" y="10" width="180" height="70" rx="8" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <rect x="10" y="92" width="500" height="90" rx="8" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <rect x="10" y="194" width="240" height="76" rx="8" fill="var(--bg-alt)" stroke="var(--border)"/>
-          <rect x="262" y="194" width="248" height="76" rx="8" fill="var(--bg-alt)" stroke="var(--border)"/>
-        </svg>
-        <p style="margin:0;"><strong>Placeholder dashboard mockup</strong> &mdash; illustrative wireframe only. Actual product UI to be designed before launch.</p>
+  </section>
+
+  <!-- DASHBOARD PLACEHOLDER -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="eyebrow">Your portfolio, at a glance</span>
+        <h2>One dashboard for occupancy, collections, and maintenance</h2>
+      </div>
+      <div class="mockup-placeholder reveal">
+        <span class="placeholder-badge">Placeholder — dashboard mockup</span>
+        <strong>Dashboard preview coming soon</strong>
+        <p style="max-width:46ch;margin:0;">This space will hold a screenshot of the live product dashboard once available. Not a representation of final UI.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section section-alt">
-  <div class="container cta-band" style="margin:0; border-radius:20px;">
-    <h2>See it work with your own unit count</h2>
-    <p class="lede center" style="margin:0 auto 30px; color:#C7CBC2;">Book a walkthrough tailored to your portfolio size.</p>
-    <div class="btn-row" style="justify-content:center;">
-      <a href="contact.html" class="btn btn-primary">Book a Demo</a>
-      <a href="pricing.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,.3); color:#F3F4EF;">View Pricing</a>
+  <!-- DETAILED BREAKDOWN -->
+  <section class="section">
+    <div class="container">
+
+      <div class="feature-detail reveal">
+        <div class="fd-copy">
+          <span class="fd-index">RENT COLLECTION &amp; PAYMENTS</span>
+          <h3>Get paid on time, without the follow-up</h3>
+          <p>Rent moves by ACH bank transfer or card, with reminders sent automatically before each due date so tenants rarely need a nudge.</p>
+          <ul class="fd-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Automated ACH and card collection</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Reminders before rent is due</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Late flagging, fee automation, and follow-up workflows</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Full payment history, per tenant and per property</li>
+          </ul>
+        </div>
+        <div class="fd-visual">
+          <svg width="220" height="180" viewBox="0 0 220 180" fill="none">
+            <rect x="10" y="20" width="200" height="140" rx="12" fill="var(--surface)" stroke="var(--line-strong)"/>
+            <rect x="28" y="42" width="164" height="20" rx="4" fill="var(--paper-2)"/>
+            <rect x="28" y="74" width="110" height="10" rx="3" fill="var(--line)"/>
+            <rect x="28" y="92" width="80" height="10" rx="3" fill="var(--line)"/>
+            <circle cx="176" cy="97" r="18" fill="var(--sage-tint)" stroke="var(--sage)"/>
+            <path d="M169 97l5 5 9-10" stroke="var(--sage-deep)" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="28" y="122" width="164" height="1" fill="var(--line)"/>
+            <rect x="28" y="136" width="60" height="10" rx="3" fill="var(--amber-tint)"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="feature-detail reverse reveal">
+        <div class="fd-copy">
+          <span class="fd-index">MAINTENANCE REQUEST TRACKING</span>
+          <h3>Every request, tracked from photo to close</h3>
+          <p>Tenants file requests with photos or video from the portal. Managers assign, prioritize, and track them on a single dashboard.</p>
+          <ul class="fd-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Tenant-facing portal with photo/video upload</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Manager dashboard to assign and prioritize</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Automated status updates back to the tenant</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Timestamped history for liability protection</li>
+          </ul>
+        </div>
+        <div class="fd-visual">
+          <svg width="220" height="180" viewBox="0 0 220 180" fill="none">
+            <rect x="16" y="16" width="90" height="70" rx="8" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <rect x="114" y="16" width="90" height="70" rx="8" fill="var(--amber-tint)" stroke="var(--amber)"/>
+            <rect x="16" y="94" width="90" height="70" rx="8" fill="var(--sage-tint)" stroke="var(--sage)"/>
+            <rect x="114" y="94" width="90" height="70" rx="8" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <text x="30" y="44" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-3)">NEW</text>
+            <text x="128" y="44" font-family="IBM Plex Mono" font-size="9" fill="var(--amber-deep)">IN PROGRESS</text>
+            <text x="30" y="122" font-family="IBM Plex Mono" font-size="9" fill="var(--sage-deep)">RESOLVED</text>
+            <text x="128" y="122" font-family="IBM Plex Mono" font-size="9" fill="var(--ink-3)">SCHEDULED</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="feature-detail reveal">
+        <div class="fd-copy">
+          <span class="fd-index">LEASE &amp; DOCUMENT MANAGEMENT</span>
+          <h3>Every lease, tracked and never missed</h3>
+          <p>Digital lease storage with renewal-date tracking and automated reminders, plus secure storage for signed leases, applications, and correspondence.</p>
+          <ul class="fd-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Renewal-date tracking with automated reminders</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> State-aware lease templates and clauses</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Secure storage for leases, applications, and ID verification</li>
+          </ul>
+        </div>
+        <div class="fd-visual">
+          <div class="building" style="width:100%; max-width:260px;">
+            <div class="building-grid">
+              <div class="unit on-sage"></div><div class="unit"></div><div class="unit"></div><div class="unit on"></div>
+              <div class="unit"></div><div class="unit on"></div><div class="unit"></div><div class="unit"></div>
+              <div class="unit"></div><div class="unit"></div><div class="unit on-sage"></div><div class="unit"></div>
+            </div>
+            <div class="building-caption"><span>LEASES</span><span>2 RENEWALS DUE</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-detail reverse reveal">
+        <div class="fd-copy">
+          <span class="fd-index">TENANT COMMUNICATION PORTAL</span>
+          <h3>One thread, not five apps</h3>
+          <p>A centralized portal replaces scattered texts and emails, with automated notices for rent, maintenance, renewals, and announcements.</p>
+          <ul class="fd-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Centralized messaging per tenant</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Automated rent-due and lease-renewal notices</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> General announcements to a whole property</li>
+          </ul>
+        </div>
+        <div class="fd-visual">
+          <svg width="220" height="180" viewBox="0 0 220 180" fill="none">
+            <rect x="20" y="30" width="140" height="34" rx="17" fill="var(--paper-2)" stroke="var(--line-strong)"/>
+            <rect x="60" y="76" width="140" height="34" rx="17" fill="var(--amber-tint)" stroke="var(--amber)"/>
+            <rect x="20" y="122" width="120" height="34" rx="17" fill="var(--sage-tint)" stroke="var(--sage)"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="feature-detail reveal">
+        <div class="fd-copy">
+          <span class="fd-index">FINANCIAL REPORTING</span>
+          <h3>Reporting that's ready for tax season</h3>
+          <p>Income and expense reporting per property and across the portfolio, exportable for accounting and Schedule E preparation, with simple dashboards for occupancy and collections.</p>
+          <ul class="fd-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Per-property and portfolio-level reports</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Exportable for accounting and tax filing</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Occupancy rate and rent collected vs. outstanding</li>
+          </ul>
+        </div>
+        <div class="fd-visual">
+          <svg width="220" height="160" viewBox="0 0 220 160" fill="none">
+            <rect x="20" y="90" width="24" height="50" rx="3" fill="var(--line-strong)"/>
+            <rect x="56" y="60" width="24" height="80" rx="3" fill="var(--amber)"/>
+            <rect x="92" y="100" width="24" height="40" rx="3" fill="var(--line-strong)"/>
+            <rect x="128" y="40" width="24" height="100" rx="3" fill="var(--sage)"/>
+            <rect x="164" y="76" width="24" height="64" rx="3" fill="var(--line-strong)"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="feature-detail reverse reveal">
+        <div class="fd-copy">
+          <span class="fd-index">TENANT SCREENING INTEGRATION</span>
+          <h3>Screen applicants without leaving the app</h3>
+          <p>Background, credit, and eviction-history screening through a third-party integration (such as TransUnion SmartMove or similar), paired with digital applications and an automated screening workflow.</p>
+          <ul class="fd-list">
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Background, credit, and eviction history checks</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Digital rental applications</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> Fair Housing Act–aware application workflow</li>
+          </ul>
+        </div>
+        <div class="fd-visual">
+          <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
+            <path d="M90 20l55 22v42c0 38-24 60-55 76-31-16-55-38-55-76V42l55-22Z" fill="var(--sage-tint)" stroke="var(--sage)"/>
+            <path d="M68 90l14 14 30-30" stroke="var(--sage-deep)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="cta-banner reveal" style="background:var(--surface); border:1px solid var(--line);">
+        <span class="eyebrow" style="justify-content:center;">See it yourself</span>
+        <h2>Want a walkthrough of your workflow specifically?</h2>
+        <p>Tell us your unit count and current setup — we'll show you exactly how RentMid fits.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div>
-        <a href="index.html" class="logo">
-          <svg class="logo-mark" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-            <rect class="void" width="30" height="30" rx="6" fill="#1B2430"/>
-            <rect x="4" y="4" width="6" height="6" fill="#D9AE5F"/><rect x="12" y="4" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="4" width="6" height="6" fill="#D9AE5F"/>
-            <rect x="4" y="12" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="12" width="6" height="6" fill="#D9AE5F"/>
-            <rect x="4" y="20" width="6" height="6" fill="#D9AE5F"/><rect x="12" y="20" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="20" width="6" height="6" fill="#D9AE5F"/>
-          </svg>
-          RentMid
-        </a>
-        <p style="margin-top:16px; max-width:280px; font-size:.92rem;">Property management software for landlords and management companies with 20&ndash;200 units.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Product</h4>
-        <ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">Why RentMid</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul><li><a href="blog.html">Resources</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Book a Demo</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul>
-      </div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="15" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="1" y="15" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="15" y="15" width="10" height="10" rx="2" fill="var(--amber)"/>
+        </svg>
+        <span class="logo-text">RentMid</span>
+      </a>
+      <p>Property management software for landlords and management companies with 20–200 units.</p>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 RentMid. Pre-launch preview site.</span>
-      <span>Made for the missing middle.</span>
-    </div>
+    <nav class="footer-col">
+      <h4>Product</h4>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">Why RentMid</a>
+      <a href="blog.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span data-year></span> RentMid. Pre-launch — content on this site is illustrative and subject to change.</p>
+    <p>Made for the missing middle.</p>
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

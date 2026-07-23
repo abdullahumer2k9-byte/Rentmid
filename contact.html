@@ -4,148 +4,151 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact &amp; Book a Demo — RentMid</title>
-<meta name="description" content="Start a free trial or book a demo of RentMid, property management software for landlords with 20–200 units.">
+<meta name="description" content="Tell us about your portfolio and book a RentMid demo, or start a free trial as an early-access landlord.">
+<link rel="canonical" href="contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <svg class="logo-mark" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-        <rect class="void" width="30" height="30" rx="6"/>
-        <rect x="4" y="4" width="6" height="6"/><rect x="12" y="4" width="6" height="6"/><rect x="20" y="4" width="6" height="6"/>
-        <rect x="4" y="12" width="6" height="6"/><rect x="20" y="12" width="6" height="6"/>
-        <rect x="4" y="20" width="6" height="6"/><rect x="12" y="20" width="6" height="6"/><rect x="20" y="20" width="6" height="6"/>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="RentMid home">
+      <svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="15" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="1" y="15" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="15" y="15" width="10" height="10" rx="2" fill="var(--amber)"/>
       </svg>
-      RentMid
+      <span class="logo-text">Rent<strong>Mid</strong></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="about.html">Why RentMid</a></li>
-      <li><a href="blog.html">Resources</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" aria-label="Toggle dark mode"></button>
-      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">Why RentMid</a>
+      <a href="blog.html">Resources</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</nav>
-
-<header class="page-hero" style="padding-bottom:0;">
-  <div class="dot-field" data-parallax="0.08"></div>
-  <div class="container reveal in">
-    <span class="eyebrow">Let's talk portfolios</span>
-    <h1>Start a trial, or book time with our team.</h1>
-    <p class="lede">Tell us a bit about your portfolio and we'll follow up &mdash; whether that's a free trial login or a 20-minute walkthrough.</p>
   </div>
 </header>
 
-<section class="section-tight">
-  <div class="container">
-    <div class="grid grid-2" style="gap:56px; align-items:start;">
-
-      <div class="card reveal-scale">
-        <h3>Get in touch</h3>
-        <form id="demo-form" novalidate>
-          <div class="form-field">
-            <label for="f-name">Full name</label>
-            <input type="text" id="f-name" name="name" required>
-            <div class="field-error" style="display:none; color:#B5533E; font-size:.8rem; margin-top:6px;">Please enter your name.</div>
-          </div>
-          <div class="form-field">
-            <label for="f-email">Work email</label>
-            <input type="email" id="f-email" name="email" required>
-            <div class="field-error" style="display:none; color:#B5533E; font-size:.8rem; margin-top:6px;">Please enter a valid email address.</div>
-          </div>
-          <div class="form-field">
-            <label for="f-company">Company or portfolio name</label>
-            <input type="text" id="f-company" name="company">
-          </div>
-          <div class="form-field">
-            <label for="f-units">Approximate unit count</label>
-            <select id="f-units" name="units" required>
-              <option value="">Select a range</option>
-              <option value="1-19">1&ndash;19 units</option>
-              <option value="20-49">20&ndash;49 units</option>
-              <option value="50-150">50&ndash;150 units</option>
-              <option value="150-200">150&ndash;200 units</option>
-              <option value="200+">200+ units</option>
-            </select>
-            <div class="field-error" style="display:none; color:#B5533E; font-size:.8rem; margin-top:6px;">Please select a unit range.</div>
-          </div>
-          <div class="form-field">
-            <label for="f-message">What would you like to do?</label>
-            <textarea id="f-message" name="message" placeholder="e.g. I'd like to book a demo, or I have questions about pricing for 80 units."></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
-          <p class="form-status" style="margin-top:16px; font-size:.88rem;"></p>
-          <p class="form-hint">This is a front-end demo form. No data is transmitted or stored &mdash; connect it to a backend or form service before launch.</p>
-        </form>
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Get started</span>
+        <h1 style="font-size:clamp(2rem,4vw,3rem);">Book a demo, or start free</h1>
+        <p class="lede">Tell us about your portfolio and we'll follow up — whether that's a live walkthrough or getting you set up as an early-access landlord.</p>
       </div>
 
-      <div class="reveal-scale" style="--i:1">
-        <div class="card" style="margin-bottom:24px;">
-          <h3>Start a free trial</h3>
-          <p>Get access to RentMid with your own properties, no credit card required for the trial period.</p>
-          <a href="#demo-form" class="btn btn-ghost">Use the form &rarr;</a>
+      <div class="contact-layout reveal">
+        <div class="form-card">
+          <div class="form-success" id="formSuccess" role="status">Thanks — that's been noted. This is a front-end demo, so no message was actually sent, but this is exactly what a confirmed submission looks like.</div>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <label for="name">Full name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="form-row">
+              <label for="company">Company (optional)</label>
+              <input type="text" id="company" name="company" autocomplete="organization">
+            </div>
+            <div class="form-row">
+              <label for="units">Number of units you manage</label>
+              <input type="number" id="units" name="units" min="1" max="10000" placeholder="e.g. 65" required>
+            </div>
+            <div class="form-row">
+              <label for="message">What would you like to talk about?</label>
+              <textarea id="message" name="message" placeholder="A few details about your portfolio, current tools, or questions." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send &amp; request a demo</button>
+            <p class="form-note">This form is a front-end preview and isn't connected to a live inbox yet. Fields are validated client-side before submission.</p>
+          </form>
         </div>
-        <div class="card" style="margin-bottom:24px;">
-          <h3>Book a 20-minute demo</h3>
-          <p>See rent collection, maintenance, and reporting walked through live, sized to your portfolio.</p>
-          <a href="#demo-form" class="btn btn-ghost">Use the form &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Already a customer?</h3>
-          <p>Reach out through this form and mention your account details &mdash; we'll route it to the right place.</p>
+
+        <div class="contact-side">
+          <h3 style="margin-bottom:24px;">What happens after you submit</h3>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+            <div>
+              <h4 style="font-family:var(--font-display); margin-bottom:4px; font-size:1.02rem;">We review your portfolio details</h4>
+              <p style="margin:0; font-size:.94rem;">Unit count and current setup help us tailor the walkthrough to how you actually work.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 1 1-4.4-7.4L21 3l-1.2 4.6"/></svg></div>
+            <div>
+              <h4 style="font-family:var(--font-display); margin-bottom:4px; font-size:1.02rem;">We follow up directly</h4>
+              <p style="margin:0; font-size:.94rem;">To schedule a live demo or start you off as an early-access landlord in our launch state.</p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="ci-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z"/></svg></div>
+            <div>
+              <h4 style="font-family:var(--font-display); margin-bottom:4px; font-size:1.02rem;">No commitment either way</h4>
+              <p style="margin:0; font-size:.94rem;">No enterprise contracts or sales pressure — just a conversation about whether RentMid fits.</p>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div>
-        <a href="index.html" class="logo">
-          <svg class="logo-mark" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-            <rect class="void" width="30" height="30" rx="6" fill="#1B2430"/>
-            <rect x="4" y="4" width="6" height="6" fill="#D9AE5F"/><rect x="12" y="4" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="4" width="6" height="6" fill="#D9AE5F"/>
-            <rect x="4" y="12" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="12" width="6" height="6" fill="#D9AE5F"/>
-            <rect x="4" y="20" width="6" height="6" fill="#D9AE5F"/><rect x="12" y="20" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="20" width="6" height="6" fill="#D9AE5F"/>
-          </svg>
-          RentMid
-        </a>
-        <p style="margin-top:16px; max-width:280px; font-size:.92rem;">Property management software for landlords and management companies with 20&ndash;200 units.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Product</h4>
-        <ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">Why RentMid</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul><li><a href="blog.html">Resources</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Book a Demo</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul>
-      </div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="15" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="1" y="15" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="15" y="15" width="10" height="10" rx="2" fill="var(--amber)"/>
+        </svg>
+        <span class="logo-text">RentMid</span>
+      </a>
+      <p>Property management software for landlords and management companies with 20–200 units.</p>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 RentMid. Pre-launch preview site.</span>
-      <span>Made for the missing middle.</span>
-    </div>
+    <nav class="footer-col">
+      <h4>Product</h4>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">Why RentMid</a>
+      <a href="blog.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span data-year></span> RentMid. Pre-launch — content on this site is illustrative and subject to change.</p>
+    <p>Made for the missing middle.</p>
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

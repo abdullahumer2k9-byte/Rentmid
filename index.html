@@ -4,294 +4,285 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RentMid — Property Management Software for 20–200 Unit Landlords</title>
-<meta name="description" content="RentMid is property management software built for the missing middle: landlords and management companies with 20–200 units. Rent collection, maintenance, leases, and compliance in one place.">
-<meta property="og:title" content="RentMid — Property Management Software for the Missing Middle">
-<meta property="og:description" content="Not built for 5 units. Not built for 5,000. RentMid is purpose-built for landlords managing 20–200 rental units.">
+<meta name="description" content="RentMid is property management software built for landlords and management companies with 20–200 units — rent collection, maintenance, leases, and reporting in one place.">
+<link rel="canonical" href="index.html">
+<meta property="og:title" content="RentMid — Property management software for the missing middle">
+<meta property="og:description" content="Built for landlords with 20–200 units. Not 5, not 5,000.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <svg class="logo-mark" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-        <rect class="void" width="30" height="30" rx="6"/>
-        <rect x="4" y="4" width="6" height="6"/>
-        <rect x="12" y="4" width="6" height="6"/>
-        <rect x="20" y="4" width="6" height="6"/>
-        <rect x="4" y="12" width="6" height="6"/>
-        <rect x="20" y="12" width="6" height="6"/>
-        <rect x="4" y="20" width="6" height="6"/>
-        <rect x="12" y="20" width="6" height="6"/>
-        <rect x="20" y="20" width="6" height="6"/>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="RentMid home">
+      <svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="15" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="1" y="15" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="15" y="15" width="10" height="10" rx="2" fill="var(--amber)"/>
       </svg>
-      RentMid
+      <span class="logo-text">Rent<strong>Mid</strong></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="about.html">Why RentMid</a></li>
-      <li><a href="blog.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" aria-label="Toggle dark mode"></button>
-      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    </div>
-  </div>
-</nav>
-
-<!-- ============ HERO ============ -->
-<header class="hero">
-  <div class="hero-bg">
-    <div class="dot-field" data-parallax="0.08"></div>
-    <div class="hero-layer hero-grid-layer" data-parallax="0.18">
-      <div class="unit-grid" data-unit-grid data-cols="12" data-total="60" data-lit="20" data-ghost="24" aria-hidden="true"></div>
-    </div>
-  </div>
-  <div class="container hero-inner">
-    <div class="hero-copy reveal in">
-      <span class="eyebrow">Property management, right-sized</span>
-      <h1>Built for landlords with 20&ndash;200 units &mdash; not 5, not 5,000.</h1>
-      <p class="lede">RentMid replaces spreadsheets, text threads, and scattered paperwork with one system for rent collection, maintenance, leases, and reporting &mdash; built around the state-by-state rules that make U.S. property management complicated in the first place.</p>
-      <div class="btn-row">
-        <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
-        <a href="contact.html" class="btn btn-ghost">Book a Demo</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><b>20&ndash;200</b><span>units per portfolio, our whole focus</span></div>
-        <div class="hero-stat"><b>41M+</b><span>properties managed on PM software worldwide</span></div>
-        <div class="hero-stat"><b>~$1B</b><span>U.S. property management software market</span></div>
-      </div>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html" class="active">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">Why RentMid</a>
+      <a href="blog.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
 
-<!-- ============ PROBLEM / SOLUTION ============ -->
-<section class="section">
-  <div class="container">
-    <div class="grid grid-2" style="gap:60px; align-items:start;">
-      <div class="reveal">
-        <span class="eyebrow">The gap</span>
-        <h2>Two kinds of software. Neither fits the middle.</h2>
-        <p class="lede">Consumer tools like Avail or TurboTenant are built for landlords with a handful of doors. Enterprise platforms like Yardi, AppFolio, and RealPage are built for portfolios in the thousands, with the pricing and complexity to match. If you manage 20 to 200 units, you're stuck outgrowing one and overpaying for the other.</p>
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">Built for 20–200 units</span>
+        <h1>Not 5, not 5,000. Software built for your 20–200 units.</h1>
+        <p class="lede">RentMid replaces spreadsheets, text threads, and scattered paperwork with one system for rent collection, maintenance, leases, tenant communication, and reporting — built for the mid-sized landlords and management companies that consumer apps and enterprise platforms both leave behind.</p>
+        <div class="hero-ctas">
+          <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+          <a href="contact.html" class="btn btn-secondary">Book a Demo</a>
+        </div>
+        <p class="hero-note">Launching state-by-state, starting with a single launch state. No 500-unit minimums, no enterprise sales cycle.</p>
       </div>
-      <div class="card reveal" style="--i:1">
-        <div class="unit-grid-wrap">
-          <div class="unit-grid" data-unit-grid data-cols="10" data-total="10" data-lit="4" aria-hidden="true"></div>
+
+      <div class="hero-visual">
+        <div class="hero-shape one" data-parallax="0.08" aria-hidden="true"></div>
+        <div class="hero-shape two" data-parallax="0.14" aria-hidden="true"></div>
+        <div class="building" aria-hidden="true">
+          <div class="building-grid">
+            <div class="unit on"></div><div class="unit"></div><div class="unit on-sage"></div><div class="unit"></div><div class="unit on"></div><div class="unit"></div>
+            <div class="unit"></div><div class="unit on"></div><div class="unit"></div><div class="unit on-sage"></div><div class="unit"></div><div class="unit on"></div>
+            <div class="unit on-sage"></div><div class="unit"></div><div class="unit on"></div><div class="unit"></div><div class="unit"></div><div class="unit on-sage"></div>
+            <div class="unit"></div><div class="unit on"></div><div class="unit"></div><div class="unit on"></div><div class="unit on-sage"></div><div class="unit"></div>
+          </div>
+          <div class="building-caption"><span>PORTFOLIO</span><span>24 / 24 UNITS TRACKED</span></div>
         </div>
-        <h3 style="margin-top:20px;">Consumer apps</h3>
-        <p>Built for 1&ndash;10 units. Fine at first, but no room to grow into multi-property operations or team workflows.</p>
-        <hr class="rule">
-        <div class="unit-grid-wrap">
-          <div class="unit-grid" data-unit-grid data-cols="10" data-total="60" data-lit="45" data-ghost="10" aria-hidden="true"></div>
-        </div>
-        <h3 style="margin-top:20px;">RentMid</h3>
-        <p>Purpose-built for 20&ndash;200 units &mdash; the exact range where spreadsheets break and enterprise software is overkill.</p>
       </div>
     </div>
+  </section>
+
+  <div class="unit-strip" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
-</section>
 
-<!-- ============ FEATURES OVERVIEW ============ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Everything in one place</span>
-      <h2>Six jobs. One system.</h2>
-      <p class="lede center">The daily work of running a mid-sized portfolio, without switching between six different tools.</p>
-    </div>
-    <div class="grid grid-3 stagger" style="margin-top:56px;">
-
-      <div class="tilt reveal-scale" style="--i:0">
-        <div class="card tilt-inner">
-          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/><path d="M7 15h4"/></svg></div>
-          <h3>Rent Collection &amp; Payments</h3>
-          <p>ACH and card collection, automatic reminders, late-fee automation, and a full payment history per tenant and property.</p>
+  <!-- PROBLEM / SOLUTION -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="eyebrow">The gap in the middle</span>
+        <h2>Two kinds of software. Neither built for you.</h2>
+        <p class="lede text-center">Consumer tools stop scaling around 10 units. Enterprise platforms assume 500+. RentMid is built for what sits in between.</p>
+      </div>
+      <div class="compare-grid reveal-stagger">
+        <div class="compare-card">
+          <div class="scale-viz"><span style="height:14px"></span><span style="height:20px"></span><span style="height:26px"></span></div>
+          <span class="compare-tag">Consumer apps</span>
+          <h3>Built for 1–10 units</h3>
+          <p>Fine for a landlord with a few doors, but the workflows, reporting, and screening tools break down fast once a portfolio grows past a handful of properties.</p>
+        </div>
+        <div class="compare-card is-mid">
+          <div class="scale-viz"><span style="height:20px"></span><span style="height:34px"></span><span style="height:20px"></span></div>
+          <span class="compare-tag">RentMid</span>
+          <h3>Built for 20–200 units</h3>
+          <p>Full rent collection, maintenance, leasing, and compliance workflows — priced and scaled for a mid-sized operation, not a portfolio ten times its size.</p>
+        </div>
+        <div class="compare-card">
+          <div class="scale-viz"><span style="height:36px"></span><span style="height:44px"></span><span style="height:40px"></span></div>
+          <span class="compare-tag">Enterprise platforms</span>
+          <h3>Built for 500+ units</h3>
+          <p>Yardi, AppFolio, and RealPage are powerful, but come with enterprise pricing, sales calls, and onboarding complexity sized for portfolios far larger than yours.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="tilt reveal-scale" style="--i:1">
-        <div class="card tilt-inner">
-          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3h9l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/><path d="M8.5 13h7M8.5 17h5"/></svg></div>
+  <!-- CORE FEATURES OVERVIEW -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Everything in one place</span>
+        <h2>One system, not six spreadsheets.</h2>
+      </div>
+      <div class="feature-grid reveal-stagger">
+
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg></div>
+          <h3>Rent Collection &amp; Payments</h3>
+          <p>ACH and card payments, automatic reminders, and late-fee workflows — with full payment history per tenant and property.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg></div>
           <h3>Lease &amp; Document Management</h3>
           <p>Digital lease storage with renewal tracking, state-aware templates, and secure storage for applications and correspondence.</p>
         </div>
-      </div>
 
-      <div class="tilt reveal-scale" style="--i:2">
-        <div class="card tilt-inner">
-          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a1 1 0 0 0-1.4 0L4 15.6V20h4.4l9.3-9.3a1 1 0 0 0 0-1.4z"/><path d="M12.5 8.5l3 3"/></svg></div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8Z"/></svg></div>
           <h3>Maintenance Request Tracking</h3>
-          <p>Tenants submit requests with photos, managers assign and prioritize, and every update is timestamped for liability protection.</p>
+          <p>Tenant-facing requests with photo upload, a manager dashboard to assign and track, and a timestamped history for liability protection.</p>
         </div>
-      </div>
 
-      <div class="tilt reveal-scale" style="--i:3">
-        <div class="card tilt-inner">
-          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 9h8M8 13h5"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 1 1-4.4-7.4L21 3l-1.2 4.6"/><path d="M3 21l3.8-1a8.4 8.4 0 0 0 2.7 1.5"/></svg></div>
           <h3>Tenant Communication Portal</h3>
-          <p>One thread replaces scattered texts and email. Automated notices for rent due, maintenance updates, and lease renewals.</p>
+          <p>One centralized thread with every tenant, replacing scattered texts and emails — plus automated rent, maintenance, and renewal notices.</p>
         </div>
-      </div>
 
-      <div class="tilt reveal-scale" style="--i:4">
-        <div class="card tilt-inner">
-          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V10M12 20V4M20 20v-7"/></svg></div>
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M11 20V4M18 20v-7"/><path d="M2 20h20"/></svg></div>
           <h3>Financial Reporting</h3>
-          <p>Per-property and portfolio-level income and expense reports, exportable for accounting, tax filing, and Schedule&nbsp;E.</p>
+          <p>Per-property and portfolio-level income and expense reports, exportable for accounting, tax filing, and Schedule E preparation.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Tenant Screening Integration</h3>
+          <p>Background, credit, and eviction-history screening through third-party providers, with digital applications and automated workflow.</p>
+        </div>
+
+      </div>
+      <div class="text-center reveal" style="margin-top:44px;">
+        <a href="features.html" class="btn btn-secondary">See every feature in detail</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="eyebrow">Pre-launch preview</span>
+        <h2>What early conversations sound like</h2>
+        <p class="lede text-center">RentMid hasn't launched yet. The quotes below are illustrative placeholders showing the kind of feedback we're designing for — not real customers.</p>
+      </div>
+      <div class="testimonial-grid reveal-stagger">
+        <div class="testimonial-card">
+          <span class="placeholder-badge">Placeholder testimonial</span>
+          <p class="testimonial-quote">"I was running 40 units out of three spreadsheets and a shared inbox. I need something built for this size, not something I have to grow into or shrink down to."</p>
+          <p class="testimonial-person">— Illustrative landlord persona, 40 units</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="placeholder-badge">Placeholder testimonial</span>
+          <p class="testimonial-quote">"Every quote we got from the big platforms assumed we had ten times the units we actually manage. We needed the features without the enterprise price tag."</p>
+          <p class="testimonial-person">— Illustrative property manager persona, 120 units</p>
+        </div>
+        <div class="testimonial-card">
+          <span class="placeholder-badge">Placeholder testimonial</span>
+          <p class="testimonial-quote">"State-specific deposit rules and renewal tracking in one place would save us hours every month compared to checking each lease by hand."</p>
+          <p class="testimonial-person">— Illustrative landlord persona, 65 units</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="tilt reveal-scale" style="--i:5">
-        <div class="card tilt-inner">
-          <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.5 3-6 7-6s7 2.5 7 6"/></svg></div>
-          <h3>Tenant Screening</h3>
-          <p>Background, credit, and eviction history checks via third-party integration, plus digital applications with automated workflow.</p>
+  <!-- PRICING PREVIEW -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header center reveal">
+        <span class="eyebrow">Simple, per-unit pricing</span>
+        <h2>Pay for the units you manage. Nothing else.</h2>
+      </div>
+      <div class="pricing-grid reveal-stagger">
+        <div class="price-card">
+          <span class="price-tier-tag">Starter</span>
+          <div class="price-amount">$1.00<span>/unit/mo</span></div>
+          <p class="price-min">$50/month minimum</p>
+          <p class="price-for">Best for 20–49 units</p>
+        </div>
+        <div class="price-card is-featured">
+          <span class="most-popular">Most common</span>
+          <span class="price-tier-tag">Growth</span>
+          <div class="price-amount">$1.99<span>/unit/mo</span></div>
+          <p class="price-min">$150/month minimum</p>
+          <p class="price-for">Best for 50–150 units</p>
+        </div>
+        <div class="price-card">
+          <span class="price-tier-tag">Pro</span>
+          <div class="price-amount">$2.89<span>/unit/mo</span></div>
+          <p class="price-min">Custom minimum</p>
+          <p class="price-for">Best for 150–200+ units</p>
         </div>
       </div>
-
+      <div class="text-center reveal" style="margin-top:36px;">
+        <a href="pricing.html" class="btn btn-secondary">See full pricing &amp; calculator</a>
+      </div>
     </div>
-    <div class="center" style="margin-top:44px;">
-      <a href="features.html" class="btn btn-ghost">See every feature in detail &rarr;</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- ============ SOCIAL PROOF ============ -->
-<section class="section">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Early feedback</span>
-      <h2>What pilot landlords are saying</h2>
-    </div>
-    <div class="grid grid-3 stagger" style="margin-top:52px;">
-
-      <div class="card reveal-scale" style="--i:0">
-        <span class="placeholder-tag">Placeholder &mdash; pre-launch</span>
-        <span class="quote-mark">&ldquo;</span>
-        <p>We had 64 units running out of three spreadsheets and a shared inbox. Having rent, leases, and maintenance in one place would save us a full day a week.</p>
-        <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><div class="testi-name">Placeholder Name</div><div class="testi-role">Owner, placeholder portfolio &middot; 64 units</div></div>
+  <!-- CTA BANNER -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner section-ink reveal">
+        <span class="eyebrow" style="color:var(--amber);">Ready when you are</span>
+        <h2>Bring your portfolio into one system.</h2>
+        <p>No enterprise contracts, no per-seat sales calls — just a plan sized for 20–200 units.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
+          <a href="contact.html" class="btn btn-secondary" style="border-color:rgba(247,243,234,0.4); color:var(--paper);">Book a Demo</a>
         </div>
       </div>
-
-      <div class="card reveal-scale" style="--i:1">
-        <span class="placeholder-tag">Placeholder &mdash; pre-launch</span>
-        <span class="quote-mark">&ldquo;</span>
-        <p>Every enterprise platform we demoed wanted a sales call, a contract, and pricing built for a thousand doors. We manage 110. This is the first thing sized right for us.</p>
-        <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><div class="testi-name">Placeholder Name</div><div class="testi-role">Property Manager, placeholder company &middot; 110 units</div></div>
-        </div>
-      </div>
-
-      <div class="card reveal-scale" style="--i:2">
-        <span class="placeholder-tag">Placeholder &mdash; pre-launch</span>
-        <span class="quote-mark">&ldquo;</span>
-        <p>The state-specific deposit and renewal reminders are what sold me &mdash; that's the part I always worried we'd get wrong doing it by hand.</p>
-        <div class="testi-person">
-          <div class="testi-avatar"></div>
-          <div><div class="testi-name">Placeholder Name</div><div class="testi-role">Landlord, placeholder portfolio &middot; 38 units</div></div>
-        </div>
-      </div>
-
     </div>
-    <p class="center" style="font-size:.85rem; margin-top:28px;">RentMid has not yet launched publicly. Testimonials above are illustrative placeholders representing our target customer, not real quotes.</p>
-  </div>
-</section>
+  </section>
 
-<!-- ============ PRICING PREVIEW ============ -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Simple, per-unit pricing</span>
-      <h2>Pricing that scales the way your portfolio does</h2>
-      <p class="lede center">No enterprise contracts, no sales calls to get a price, no onboarding fees.</p>
-    </div>
-    <div class="grid grid-3 stagger" style="margin-top:52px;">
-      <div class="card price-card reveal-scale" style="--i:0">
-        <h3>Starter</h3>
-        <div class="price-amount">$1.00<span>/unit/mo</span></div>
-        <div class="price-min">$50/month minimum</div>
-        <p>Best for 20&ndash;49 units.</p>
-      </div>
-      <div class="card price-card featured reveal-scale" style="--i:1">
-        <h3>Growth</h3>
-        <div class="price-amount">$1.99<span>/unit/mo</span></div>
-        <div class="price-min">$150/month minimum</div>
-        <p>Best for 50&ndash;150 units.</p>
-      </div>
-      <div class="card price-card reveal-scale" style="--i:2">
-        <h3>Pro</h3>
-        <div class="price-amount">$2.89<span>/unit/mo</span></div>
-        <div class="price-min">Custom minimum</div>
-        <p>Best for 150&ndash;200+ units.</p>
-      </div>
-    </div>
-    <div class="center" style="margin-top:40px;">
-      <a href="pricing.html" class="btn btn-primary">See full pricing &amp; calculator</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA BAND ============ -->
-<section class="section">
-  <div class="container">
-    <div class="cta-band reveal-scale">
-      <div class="diag-lines" style="opacity:.15;"></div>
-      <h2>Ready to get your portfolio out of spreadsheets?</h2>
-      <p class="lede center" style="margin:0 auto 30px; color:#C7CBC2;">Start a free trial, or book a 20-minute demo with our team.</p>
-      <div class="btn-row" style="justify-content:center;">
-        <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
-        <a href="contact.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,.3); color:#F3F4EF;">Book a Demo</a>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div>
-        <a href="index.html" class="logo">
-          <svg class="logo-mark" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-            <rect class="void" width="30" height="30" rx="6" fill="#1B2430"/>
-            <rect x="4" y="4" width="6" height="6" fill="#D9AE5F"/><rect x="12" y="4" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="4" width="6" height="6" fill="#D9AE5F"/>
-            <rect x="4" y="12" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="12" width="6" height="6" fill="#D9AE5F"/>
-            <rect x="4" y="20" width="6" height="6" fill="#D9AE5F"/><rect x="12" y="20" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="20" width="6" height="6" fill="#D9AE5F"/>
-          </svg>
-          RentMid
-        </a>
-        <p style="margin-top:16px; max-width:280px; font-size:.92rem;">Property management software for landlords and management companies with 20&ndash;200 units.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Product</h4>
-        <ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">Why RentMid</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul><li><a href="blog.html">Resources</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Book a Demo</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul>
-      </div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="15" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="1" y="15" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="15" y="15" width="10" height="10" rx="2" fill="var(--amber)"/>
+        </svg>
+        <span class="logo-text">RentMid</span>
+      </a>
+      <p>Property management software for landlords and management companies with 20–200 units.</p>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 RentMid. Pre-launch preview site.</span>
-      <span>Made for the missing middle.</span>
-    </div>
+    <nav class="footer-col">
+      <h4>Product</h4>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">Why RentMid</a>
+      <a href="blog.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span data-year></span> RentMid. Pre-launch — content on this site is illustrative and subject to change.</p>
+    <p>Made for the missing middle.</p>
   </div>
 </footer>
 
-<script src="main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

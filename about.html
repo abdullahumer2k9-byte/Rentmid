@@ -3,153 +3,180 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Why RentMid — The Missing Middle in Property Management</title>
-<meta name="description" content="Why mid-sized landlords with 20–200 units are underserved by both consumer apps and enterprise property management platforms — and how RentMid is built to close that gap.">
+<title>Why RentMid — The Missing Middle of Property Management</title>
+<meta name="description" content="Why RentMid exists: mid-sized landlords with 20–200 units are underserved by both consumer apps and enterprise property management platforms.">
+<link rel="canonical" href="about.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="logo">
-      <svg class="logo-mark" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-        <rect class="void" width="30" height="30" rx="6"/>
-        <rect x="4" y="4" width="6" height="6"/><rect x="12" y="4" width="6" height="6"/><rect x="20" y="4" width="6" height="6"/>
-        <rect x="4" y="12" width="6" height="6"/><rect x="20" y="12" width="6" height="6"/>
-        <rect x="4" y="20" width="6" height="6"/><rect x="12" y="20" width="6" height="6"/><rect x="20" y="20" width="6" height="6"/>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="RentMid home">
+      <svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="15" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="1" y="15" width="10" height="10" rx="2" fill="currentColor" opacity="0.18"/>
+        <rect x="15" y="15" width="10" height="10" rx="2" fill="var(--amber)"/>
       </svg>
-      RentMid
+      <span class="logo-text">Rent<strong>Mid</strong></span>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="pricing.html">Pricing</a></li>
-      <li><a href="about.html" class="active">Why RentMid</a></li>
-      <li><a href="blog.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a></li>
-    </ul>
-    <div class="nav-right">
-      <button class="theme-toggle" aria-label="Toggle dark mode"></button>
-      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html" class="active">Why RentMid</a>
+      <a href="blog.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book a Demo</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</nav>
-
-<header class="page-hero">
-  <div class="dot-field" data-parallax="0.08"></div>
-  <div class="container reveal in">
-    <span class="eyebrow">The missing middle</span>
-    <h1>Somewhere between a spreadsheet and Yardi, there's a gap. That's where we live.</h1>
-    <p class="lede">Property management software has a size problem. RentMid exists to fix it for the landlords stuck in the middle.</p>
   </div>
 </header>
 
-<section class="section-tight">
-  <div class="container">
-    <div class="grid grid-2" style="gap: 60px; align-items:start;">
+<main>
 
-      <div class="reveal">
-        <span class="eyebrow">01 &mdash; too small for enterprise</span>
-        <div class="unit-grid" data-unit-grid data-cols="14" data-total="200" data-lit="0" data-ghost="80" style="margin-bottom:20px;" aria-hidden="true"></div>
-        <h3>Enterprise platforms are built for 500+ units</h3>
-        <p>Yardi, AppFolio, and RealPage are excellent tools &mdash; for portfolios that dwarf a mid-sized landlord's. Their pricing, sales process, and feature depth assume a management company running thousands of doors. A 60-unit landlord signing up gets a system built for a problem five times their size, at a price to match.</p>
+  <section class="section" style="padding-bottom:20px;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Why RentMid</span>
+        <h1 style="font-size:clamp(2.1rem,4.4vw,3.4rem); max-width:16ch;">The missing middle of property management</h1>
+        <p class="lede">Property management software has a gap in it — and it happens to be exactly where most working landlords live.</p>
       </div>
 
-      <div class="reveal" style="--i:1">
-        <span class="eyebrow">02 &mdash; too big for consumer tools</span>
-        <div class="unit-grid" data-unit-grid data-cols="14" data-total="10" data-lit="10" style="margin-bottom:20px; max-width:140px;" aria-hidden="true"></div>
-        <h3>Consumer apps are built for 1&ndash;10 units</h3>
-        <p>Tools like Avail or TurboTenant are genuinely good for someone renting out a house or two. But once a landlord is running 20, 50, or 100 units, those tools start to show their seams &mdash; no team workflows, no portfolio-level reporting, no room to operate like the business it's become.</p>
-      </div>
-
-    </div>
-
-    <div class="card reveal-scale" style="margin-top:56px; padding:44px;">
-      <div class="grid grid-2" style="gap:40px; align-items:center;">
-        <div>
-          <span class="eyebrow">03 &mdash; the gap in the middle</span>
-          <h2 style="margin-bottom:.3em;">20 to 200 units is a real, sizable market that's currently underserved</h2>
-          <p>Globally, over 41 million commercial and residential properties are managed using property management software, and the U.S. is the single largest regional market for that software, generating close to a billion dollars in annual revenue. Yet the mid-sized segment &mdash; landlords and management companies with 20 to 200 units &mdash; remains poorly served, forced to either outgrow simple consumer apps or overpay for systems built for portfolios far larger than theirs.</p>
+      <div class="scales reveal-stagger">
+        <div class="scale-block small">
+          <div class="scale-visual"></div>
+          <h4>1–10 units</h4>
+          <p>Consumer apps like Avail or TurboTenant</p>
         </div>
-        <div class="unit-grid-wrap">
-          <div class="unit-grid" data-unit-grid data-cols="14" data-total="200" data-lit="130" data-ghost="60" aria-hidden="true"></div>
+        <div class="scale-block mid">
+          <div class="scale-visual"></div>
+          <h4>20–200 units</h4>
+          <p>RentMid</p>
+        </div>
+        <div class="scale-block large">
+          <div class="scale-visual"></div>
+          <h4>500+ units</h4>
+          <p>Yardi, AppFolio, RealPage</p>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="section section-alt">
-  <div class="container">
-    <div class="center reveal">
-      <span class="eyebrow">Our approach</span>
-      <h2>Purpose-built, not retrofitted</h2>
-      <p class="lede center">RentMid isn't an enterprise product with features hidden, or a consumer app with more buttons bolted on. It's designed from the ground up around the operational and legal reality of managing 20&ndash;200 units in the United States.</p>
-    </div>
-    <div class="grid grid-3 stagger" style="margin-top:52px;">
-      <div class="card reveal-scale" style="--i:0">
-        <h3>Simplicity</h3>
-        <p>One system for rent, leases, maintenance, communication, and reporting &mdash; no six-tab workflow to keep a portfolio running.</p>
-      </div>
-      <div class="card reveal-scale" style="--i:1">
-        <h3>Fair pricing</h3>
-        <p>Per-unit pricing that scales naturally with portfolio size, without enterprise-style contracts or sales calls to find out the cost.</p>
-      </div>
-      <div class="card reveal-scale" style="--i:2">
-        <h3>State-law-aware compliance</h3>
-        <p>Security deposit limits, eviction procedures, and Fair Housing Act considerations built in from day one, launch state first.</p>
-      </div>
-    </div>
+  <div class="unit-strip" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
   </div>
-</section>
 
-<section class="section">
-  <div class="container cta-band" style="margin:0; border-radius:20px;">
-    <h2>Built for landlords like you, not landlords like them</h2>
-    <p class="lede center" style="margin:0 auto 30px; color:#C7CBC2;">See how RentMid fits a portfolio your size.</p>
-    <div class="btn-row" style="justify-content:center;">
-      <a href="contact.html" class="btn btn-primary">Book a Demo</a>
-      <a href="features.html" class="btn btn-ghost" style="border-color:rgba(255,255,255,.3); color:#F3F4EF;">Explore Features</a>
+  <section class="section">
+    <div class="container">
+      <div class="prose reveal">
+        <p class="lede" style="max-width:none;">Somewhere between a landlord renting out a duplex and a management company running a thousand-unit portfolio, there's an enormous, unglamorous middle: independent landlords and small-to-mid-sized management companies running 20 to 200 residential units, usually in a single state.</p>
+
+        <h2>Too big for consumer tools</h2>
+        <p>These are operators who've outgrown a shared inbox and a spreadsheet, but they don't need — or want to pay for — a system built for a portfolio ten times their size. Consumer-grade tools are built for 1–10 units. Past that, workflows built for a handful of doors start to break: no real maintenance tracking, no meaningful financial reporting, no help with the state-specific rules that come with running a real business.</p>
+
+        <h2>Too small for enterprise platforms</h2>
+        <p>On the other end, platforms like Yardi, AppFolio, and RealPage are built for portfolios of 500 units and up. They come with enterprise pricing, sales calls, and onboarding complexity that make sense at that scale — and very little sense for a landlord running 60 units on their own.</p>
+
+        <h2>A large market, still underserved</h2>
+        <p>This isn't a small niche. Globally, more than 41 million commercial and residential properties are managed using property management software, and the United States is the largest regional market for that software, generating close to a billion dollars in annual revenue. Yet the mid-sized segment — 20 to 200 units — remains the part of that market both ends of the industry have left behind.</p>
+
+        <h2>Built for how US landlords actually operate</h2>
+        <p>US property management is also genuinely complicated in ways that vary by location: rent control rules, eviction procedures, security deposit limits, and Fair Housing Act compliance all differ, or apply differently, depending on the state and city. RentMid is designed to expand state by state, starting with a single launch state, rather than claiming nationwide compliance on day one — because landlord-tenant law in the US is set at the state, and sometimes city, level.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Who it's for</span>
+        <h2>Built for a specific kind of operator</h2>
+      </div>
+      <div class="feature-grid reveal-stagger" style="grid-template-columns:repeat(2,1fr);">
+        <div class="feature-card">
+          <h3>Independent landlords, 20–200 units</h3>
+          <p>Running a real portfolio in a single US state, currently relying on spreadsheets, generic form tools, or a consumer app they've outgrown.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Small-to-mid-sized management companies</h3>
+          <p>Managing that same range of units for others, without the scale — or budget — to justify an enterprise platform contract.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow">Key differentiator</span>
+        <h2>Purpose-built, not retrofitted</h2>
+        <p class="lede">Unlike generic property tools or enterprise platforms scaled down for smaller clients, RentMid is built from the ground up for the operational and legal needs of mid-sized US property managers — combining simplicity, fair per-unit pricing, and state-law-aware compliance from day one.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="cta-banner section-ink reveal">
+        <span class="eyebrow" style="color:var(--amber); justify-content:center;">Join early access</span>
+        <h2>Help shape the platform built for you.</h2>
+        <p>We're onboarding early-access landlords in our first launch state.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-primary">Book a Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-top">
-      <div>
-        <a href="index.html" class="logo">
-          <svg class="logo-mark" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-            <rect class="void" width="30" height="30" rx="6" fill="#1B2430"/>
-            <rect x="4" y="4" width="6" height="6" fill="#D9AE5F"/><rect x="12" y="4" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="4" width="6" height="6" fill="#D9AE5F"/>
-            <rect x="4" y="12" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="12" width="6" height="6" fill="#D9AE5F"/>
-            <rect x="4" y="20" width="6" height="6" fill="#D9AE5F"/><rect x="12" y="20" width="6" height="6" fill="#D9AE5F"/><rect x="20" y="20" width="6" height="6" fill="#D9AE5F"/>
-          </svg>
-          RentMid
-        </a>
-        <p style="margin-top:16px; max-width:280px; font-size:.92rem;">Property management software for landlords and management companies with 20&ndash;200 units.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Product</h4>
-        <ul><li><a href="features.html">Features</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="about.html">Why RentMid</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul><li><a href="blog.html">Resources</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Book a Demo</a></li></ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul>
-      </div>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <svg class="logo-mark" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="1" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="15" y="1" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="1" y="15" width="10" height="10" rx="2" fill="currentColor" opacity="0.25"/>
+          <rect x="15" y="15" width="10" height="10" rx="2" fill="var(--amber)"/>
+        </svg>
+        <span class="logo-text">RentMid</span>
+      </a>
+      <p>Property management software for landlords and management companies with 20–200 units.</p>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 RentMid. Pre-launch preview site.</span>
-      <span>Made for the missing middle.</span>
-    </div>
+    <nav class="footer-col">
+      <h4>Product</h4>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">Why RentMid</a>
+      <a href="blog.html">Resources</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span data-year></span> RentMid. Pre-launch — content on this site is illustrative and subject to change.</p>
+    <p>Made for the missing middle.</p>
   </div>
 </footer>
 
