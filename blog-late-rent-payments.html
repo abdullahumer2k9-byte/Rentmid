@@ -3,22 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About RentMid — Why We Built for the Missing Middle</title>
-<meta name="description" content="Why RentMid exists: the 20–200 unit landlord is too big for consumer apps and too small for enterprise platforms like Yardi or AppFolio. Here's our story.">
+<title>How to Handle Late Rent Payments (Without Losing the Tenant) | RentMid</title>
+<meta name="description" content="A practical, state-law-aware framework for handling late rent: grace periods, late fee limits, notice requirements, and when to escalate.">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://www.rentmid.com/about.html">
+<link rel="canonical" href="https://www.rentmid.com/blog-late-rent-payments.html">
 <meta name="theme-color" content="#EFE8DA" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#14181A" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RentMid">
-<meta property="og:title" content="About RentMid — Why We Built for the Missing Middle">
-<meta property="og:description" content="Why RentMid exists: the 20–200 unit landlord is too big for consumer apps and too small for enterprise platforms like Yardi or AppFolio. Here's our story.">
-<meta property="og:url" content="https://www.rentmid.com/about.html">
+<meta property="og:title" content="How to Handle Late Rent Payments (Without Losing the Tenant) | RentMid">
+<meta property="og:description" content="A practical, state-law-aware framework for handling late rent: grace periods, late fee limits, notice requirements, and when to escalate.">
+<meta property="og:url" content="https://www.rentmid.com/blog-late-rent-payments.html">
 <meta property="og:image" content="https://www.rentmid.com/og-image.svg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About RentMid — Why We Built for the Missing Middle">
-<meta name="twitter:description" content="Why RentMid exists: the 20–200 unit landlord is too big for consumer apps and too small for enterprise platforms like Yardi or AppFolio. Here's our story.">
+<meta name="twitter:title" content="How to Handle Late Rent Payments (Without Losing the Tenant) | RentMid">
+<meta name="twitter:description" content="A practical, state-law-aware framework for handling late rent: grace periods, late fee limits, notice requirements, and when to escalate.">
 
 <link rel="icon" type="image/svg+xml" href="mark.svg">
 <link rel="apple-touch-icon" href="mark.svg">
@@ -30,7 +30,24 @@
 <link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="base.css">
 <link rel="stylesheet" href="components.css">
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Handle Late Rent Payments (Without Losing the Tenant)",
+  "description": "A practical, state-law-aware framework for handling late rent: grace periods, late fee limits, notice requirements, and when to escalate.",
+  "datePublished": "2026-03-04",
+  "dateModified": "2026-03-04",
+  "author": {
+    "@type": "Organization",
+    "name": "RentMid"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "RentMid"
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -79,68 +96,44 @@
 </header>
 
 <main id="main">
-<section class="container section--tight">
-  <div class="section-head reveal">
-    <span class="eyebrow">About RentMid</span>
-    <h1>We built for the size of business everyone else designs around.</h1>
-    <p class="lede">RentMid exists because of a gap we kept running into: the landlord with 20, 60, or 150 units who is too big for a consumer app and too small for an enterprise platform — and gets treated as an afterthought by both.</p>
-  </div>
-</section>
+<article class="container section--tight article-body">
+  <div class="reveal">
+    <span class="eyebrow"><a href="blog.html" style="text-decoration:none;">← Resources</a></span>
+    <h1>How to handle late rent payments (without losing the tenant)</h1>
+    <div class="article-meta">
+      <span>Rent collection</span><span>·</span><span>6 min read</span><span>·</span><span>Updated March 2026</span>
+    </div>
+    <p class="lede">Late rent is the single most common friction point in property management — and how you handle the first few days often decides whether it becomes a one-time hiccup or a pattern.</p>
 
-<img class="skyline-rule container" src="skyline-rule.svg" alt="">
+    <h2>Start with a grace period you actually enforce</h2>
+    <p>Most leases include a grace period before a payment is officially "late" — commonly a few days after the due date. The grace period only works if it's applied the same way every time. If you sometimes waive a late fee and sometimes don't, tenants learn that the deadline is negotiable, and your automated systems stop being credible.</p>
+    <p>A written, automated reminder a few days before rent is due does more to prevent late payments than any late fee does after the fact. By the time a fee is on the table, you've already lost the easiest opportunity to fix the problem.</p>
 
-<section class="container section">
-  <div class="grid grid-2">
-    <div class="reveal">
-      <span class="eyebrow">The problem</span>
-      <h2>"Missing middle," twice over</h2>
-      <p>In housing, the "missing middle" describes the duplexes, triplexes, and small apartment buildings that used to sit between single-family homes and large complexes — and that stopped getting built for decades. We borrowed the phrase because the same gap shows up in the software built to manage those buildings.</p>
-      <p>Over 41 million commercial and residential properties worldwide are already managed with property management software, and the US is the largest single regional market for it, generating close to a billion dollars a year. That market has plenty of tools — just not for the middle of it.</p>
-    </div>
-    <div class="reveal">
-      <span class="eyebrow">Where the gap sits</span>
-      <h2>Underserved from both directions</h2>
-      <p>Consumer-grade tools are built for 1–10 units: a single landlord with a couple of rentals. Enterprise platforms — Yardi, AppFolio, RealPage — are built for 500+ units, with pricing, sales processes, and implementation timelines to match.</p>
-      <p>A landlord or small management company running 20 to 200 units gets forced into one of two bad fits: outgrowing the simple app, or overpaying for a system with modules they'll never touch. RentMid is built only for that middle range — not as a stripped-down enterprise product, and not as a consumer app with more buttons.</p>
-    </div>
-  </div>
-</section>
+    <h2>Separate "late" from "won't pay"</h2>
+    <p>Most late payments aren't a sign of a bad tenant — they're a timing problem: a paycheck landed a few days off, a bank transfer took longer than expected, or a bill got missed in a busy week. Treat the first late payment as a timing issue, not a character issue. A short, factual message that flags the missed due date and states the late fee that now applies is usually enough.</p>
+    <p>A repeated pattern is a different conversation. If a tenant is late three months running, the useful question shifts from "how do I collect this month's rent" to "does this lease need a different payment plan, or does it need to end." That's a conversation worth having directly and in writing, not one to keep automating around.</p>
 
-<section class="container section section--tight">
-  <div class="card reveal" style="padding: var(--space-5);">
-    <span class="eyebrow">Why it matters</span>
-    <h2>Why the gap persisted this long</h2>
-    <p style="max-width: 70ch;">Landlord-tenant law in the US is set state by state, and sometimes city by city — rent control, eviction procedure, security deposit limits, and Fair Housing compliance all shift depending on where a property sits. Building that correctly takes real work, and it's easier for a platform to either ignore it (consumer tools) or bury it inside a much bigger, much more expensive system (enterprise tools). We think a mid-sized operator deserves compliance support without paying enterprise rates for it — which is why RentMid launches one state at a time, gets that state right, and expands from there instead of claiming nationwide coverage on day one.</p>
-  </div>
-</section>
+    <h2>Know your state's rules before you act</h2>
+    <p>Grace periods, the maximum late fee you're allowed to charge, and the notice you're required to give before pursuing eviction for nonpayment are all set at the state level in the US, and some cities layer on additional requirements. A late fee structure that's perfectly normal in one state can be unenforceable — or even illegal — in another.</p>
+    <p>This isn't legal advice, and rules change over time, so verify the current requirements for your state (and city, if applicable) before finalizing a late-fee policy or starting an eviction process. A property management platform with state-aware compliance tracking can flag this automatically, but a quick check with a local landlord-tenant attorney or your state's housing authority is worth it for anything you're unsure about.</p>
 
-<section class="container section--tight">
-  <div class="section-head reveal">
-    <span class="eyebrow">What we won't do</span>
-    <h2>How we try to earn trust as a small company</h2>
+    <h2>Automate the paperwork, not the judgment call</h2>
+    <p>The parts of late-rent handling that benefit most from automation are the ones that are purely mechanical: sending the reminder, flagging the missed due date, applying the fee your lease specifies, and logging every step with a timestamp in case you need the record later. What shouldn't be automated is the decision about when a pattern of lateness needs a human conversation instead of another automated notice.</p>
+    <ul>
+      <li>Automate: due-date reminders, late flags, fee calculation, payment history logging.</li>
+      <li>Don't automate: the decision to escalate, restructure a payment plan, or begin a legal process.</li>
+    </ul>
+
+    <h2>The takeaway</h2>
+    <p>Consistent, automatic reminders prevent most late payments before they happen. Consistent, automatic fee application handles the rest fairly. And treating a repeat pattern as a conversation — not just another automated notice — is what actually protects the relationship with a tenant worth keeping.</p>
   </div>
-  <div class="grid grid-3">
-    <div class="card reveal">
-      <h4>No hidden enterprise-style contracts</h4>
-      <p>Per-unit, month-to-month pricing, visible on the pricing page — not "contact sales for a quote" on everything.</p>
-    </div>
-    <div class="card reveal">
-      <h4>No overstated compliance claims</h4>
-      <p>We tell you exactly which state's rules are built in today, and we don't pretend to cover states we haven't built yet.</p>
-    </div>
-    <div class="card reveal">
-      <h4>No disappearing support</h4>
-      <p>Being a smaller, focused company means a maintenance ticket or a billing question reaches someone who can actually answer it.</p>
-    </div>
-  </div>
-</section>
+</article>
 
 <section class="container section--tight">
   <div class="cta-band reveal">
-    <h2>Come see the middle we built for</h2>
+    <h2>See automated rent collection in action</h2>
     <div class="hero-cta" style="margin-top:0;">
       <a href="contact.html" class="btn btn-primary btn-lg">Book a demo</a>
-      <a href="pricing.html" class="btn btn-secondary btn-lg">See pricing</a>
     </div>
   </div>
 </section>

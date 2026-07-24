@@ -1,56 +1,47 @@
-/* RentMid — shared front-end behavior
-   No external dependencies. Respects prefers-reduced-motion.
-   Note: theme preference is kept in memory + defaults to the
-   OS preference on each load (no localStorage/sessionStorage
-   is used, by design, for sandboxed-preview compatibility). */
-
 (function () {
   "use strict";
 
-  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ---------------- Footer year ---------------- */
-  document.querySelectorAll("[data-year]").forEach(function (el) {
-    el.textContent = new Date().getFullYear();
+  /* ---------- Active nav link ---------- */
+  var here = (location.pathname.split("/").pop() || "index.html").replace(/^$/, "index.html");
+  document.querySelectorAll(".nav-links a, .mobile-menu a").forEach(function (a) {
+    var href = a.getAttribute("href");
+    if (href === here || (here === "index.html" && href === "./")) {
+      a.setAttribute("aria-current", "page");
+    }
   });
 
-  /* ---------------- Theme toggle ---------------- */
-  var root = document.documentElement;
-  var themeToggle = document.getElementById("themeToggle");
-  var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  root.setAttribute("data-theme", prefersDark ? "dark" : "light");
-
-  if (themeToggle) {
-    themeToggle.addEventListener("click", function () {
-      var current = root.getAttribute("data-theme");
-      root.setAttribute("data-theme", current === "dark" ? "light" : "dark");
-    });
-  }
-
-  /* ---------------- Mobile nav ---------------- */
-  var navToggle = document.getElementById("navToggle");
-  var siteNav = document.getElementById("siteNav");
-  if (navToggle && siteNav) {
+  /* ---------- Mobile menu ---------- */
+  var navToggle = document.querySelector(".nav-toggle");
+  var mobileMenu = document.querySelector(".mobile-menu");
+  if (navToggle && mobileMenu) {
     navToggle.addEventListener("click", function () {
-      var isOpen = siteNav.classList.toggle("is-open");
-      navToggle.classList.toggle("is-active", isOpen);
-      document.body.classList.toggle("nav-open", isOpen);
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-    siteNav.querySelectorAll("a").forEach(function (a) {
-      a.addEventListener("click", function () {
-        siteNav.classList.remove("is-open");
-        navToggle.classList.remove("is-active");
-        document.body.classList.remove("nav-open");
-      });
+      var open = mobileMenu.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
   }
 
-  /* ---------------- Scroll reveal ---------------- */
-  var revealEls = document.querySelectorAll(".reveal, .reveal-stagger");
-  if (reduceMotion) {
-    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
-  } else if ("IntersectionObserver" in window) {
+  /* ---------- Theme toggle ----------
+     In-memory only for this page view (no localStorage/sessionStorage),
+     defaults to the visitor's system preference via the [data-theme]
+     attribute + prefers-color-scheme media query in tokens.css.
+     When you deploy this site on your own domain, swap the two lines
+     marked below for localStorage calls to persist the choice across
+     page loads and navigations. */
+  var root = document.documentElement;
+  var toggle = document.querySelector(".theme-toggle");
+  if (toggle) {
+    toggle.addEventListener("click", function () {
+      var current = root.getAttribute("data-theme");
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var isDark = current ? current === "dark" : prefersDark;
+      root.setAttribute("data-theme", isDark ? "light" : "dark"); // <- swap for localStorage.setItem when self-hosting
+      toggle.setAttribute("aria-pressed", (!isDark).toString());
+    });
+  }
+
+  /* ---------- Scroll reveals ---------- */
+  var revealEls = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window && revealEls.length) {
     var io = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
@@ -60,178 +51,76 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.12 }
     );
     revealEls.forEach(function (el) { io.observe(el); });
   } else {
     revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  /* ---------------- Hero 3D tilt (mouse) + scroll parallax ---------------- */
-  var building = document.querySelector(".building");
-  var heroVisual = document.querySelector(".hero-visual");
-  if (building && heroVisual && !reduceMotion) {
-    heroVisual.addEventListener("mousemove", function (e) {
-      var rect = heroVisual.getBoundingClientRect();
-      var x = (e.clientX - rect.left) / rect.width - 0.5;
-      var y = (e.clientY - rect.top) / rect.height - 0.5;
-      building.style.setProperty("--tiltY", (x * 22).toFixed(2) + "deg");
-      building.style.setProperty("--tiltX", (8 - y * 18).toFixed(2) + "deg");
-    });
-    heroVisual.addEventListener("mouseleave", function () {
-      building.style.setProperty("--tiltY", "-10deg");
-      building.style.setProperty("--tiltX", "8deg");
-    });
-  }
+  /* ---------- Pricing calculator ---------- */
+  var slider = document.getElementById("unit-slider");
+  if (slider) {
+    var out = document.getElementById("unit-count-out");
+    var tierName = document.getElementById("calc-tier-name");
+    var amount = document.getElementById("calc-amount");
+    var perUnit = document.getElementById("calc-per-unit");
+    var note = document.getElementById("calc-note");
 
-  var parallaxEls = document.querySelectorAll("[data-parallax]");
-  if (parallaxEls.length && !reduceMotion) {
-    var ticking = false;
-    function updateParallax() {
-      var vh = window.innerHeight;
-      parallaxEls.forEach(function (el) {
-        var speed = parseFloat(el.getAttribute("data-parallax")) || 0.15;
-        var rect = el.getBoundingClientRect();
-        var offset = (rect.top - vh / 2) * speed;
-        el.style.transform = "translate3d(0," + offset.toFixed(1) + "px,0)";
-      });
-      ticking = false;
+    var tiers = [
+      { max: 49, name: "Starter", rate: 1.00, min: 50 },
+      { max: 150, name: "Growth", rate: 1.99, min: 150 },
+      { max: 200, name: "Pro", rate: 2.89, min: 0 },
+      { max: Infinity, name: "Enterprise", rate: null, min: 0 }
+    ];
+
+    function fmt(n) {
+      return n.toLocaleString("en-US", { maximumFractionDigits: 0 });
     }
-    window.addEventListener("scroll", function () {
-      if (!ticking) { window.requestAnimationFrame(updateParallax); ticking = true; }
-    }, { passive: true });
-    updateParallax();
-  }
 
-  /* ---------------- Horizontal scroll showcase ---------------- */
-  var hscroll = document.querySelector(".hscroll-section");
-  if (hscroll) {
-    var sticky = hscroll.querySelector(".hscroll-sticky");
-    var track = hscroll.querySelector(".hscroll-track");
-    var progressBar = hscroll.querySelector(".hscroll-progress-bar");
+    function update() {
+      var units = parseInt(slider.value, 10);
+      out.textContent = fmt(units);
 
-    function layoutHscroll() {
-      if (window.innerWidth <= 780) {
-        hscroll.style.height = "auto";
-        track.style.transform = "none";
+      var tier = tiers.find(function (t) { return units <= t.max; }) || tiers[tiers.length - 1];
+
+      if (tier.name === "Enterprise") {
+        tierName.textContent = "Enterprise";
+        amount.innerHTML = "Custom <span>— talk to us</span>";
+        perUnit.textContent = "200–500+ units · volume pricing";
+        note.textContent = "You're in enterprise territory. We'll scope a flat, portfolio-wide rate — book a call to get a quote.";
         return;
       }
-      var trackWidth = track.scrollWidth;
-      var viewportW = window.innerWidth;
-      var scrollDistance = Math.max(trackWidth - viewportW + 56, 0);
-      hscroll.style.height = (window.innerHeight + scrollDistance) + "px";
-      hscroll.dataset.scrollDistance = scrollDistance;
+
+      var raw = units * tier.rate;
+      var monthly = Math.max(raw, tier.min);
+      tierName.textContent = tier.name;
+      amount.innerHTML = "$" + fmt(monthly) + "<span>/month</span>";
+      perUnit.textContent = "$" + tier.rate.toFixed(2) + "/unit · " + fmt(units) + " units";
+      note.textContent = monthly === tier.min && raw < tier.min
+        ? "Billed at the " + fmt(tier.min) + "/month plan minimum for this tier."
+        : "Scales linearly — add or remove units anytime, no re-contracting.";
     }
 
-    function onScrollHscroll() {
-      if (window.innerWidth <= 780) return;
-      var scrollDistance = parseFloat(hscroll.dataset.scrollDistance || "0");
-      var rect = hscroll.getBoundingClientRect();
-      var progress = (-rect.top) / (scrollDistance || 1);
-      progress = Math.min(Math.max(progress, 0), 1);
-      track.style.transform = "translate3d(" + (-progress * scrollDistance).toFixed(1) + "px,0,0)";
-      if (progressBar) progressBar.style.width = (progress * 100).toFixed(1) + "%";
-    }
-
-    window.addEventListener("resize", layoutHscroll);
-    window.addEventListener("scroll", function () {
-      window.requestAnimationFrame(onScrollHscroll);
-    }, { passive: true });
-    layoutHscroll();
-    onScrollHscroll();
+    slider.addEventListener("input", update);
+    update();
   }
 
-  /* ---------------- Pricing calculator ---------------- */
-  var unitsInput = document.getElementById("unitsInput");
-  var unitsRange = document.getElementById("unitsRange");
-  var calcPrice = document.getElementById("calcPrice");
-  var calcSub = document.getElementById("calcSub");
-  var tierBadge = document.getElementById("tierBadge");
-  var gridPreview = document.getElementById("calcGridPreview");
-
-  function buildGridPreview(cellCount) {
-    if (!gridPreview) return;
-    gridPreview.innerHTML = "";
-    for (var i = 0; i < cellCount; i++) {
-      var cell = document.createElement("div");
-      cell.className = "cell";
-      gridPreview.appendChild(cell);
-    }
-  }
-
-  function updateGridFill(units, max) {
-    if (!gridPreview) return;
-    var cells = gridPreview.children;
-    var filled = Math.round((units / max) * cells.length);
-    for (var i = 0; i < cells.length; i++) {
-      cells[i].classList.toggle("filled", i < filled);
-    }
-  }
-
-  function computeTier(units) {
-    if (units <= 49) {
-      return { name: "Starter", rate: 1.00, min: 50 };
-    } else if (units <= 150) {
-      return { name: "Growth", rate: 1.99, min: 150 };
-    } else {
-      return { name: "Pro", rate: 2.89, min: null };
-    }
-  }
-
-  function runCalculator(units) {
-    units = Math.min(Math.max(parseInt(units, 10) || 0, 1), 250);
-    var tier = computeTier(units);
-    var cost = units * tier.rate;
-    var minApplied = false;
-    if (tier.min && cost < tier.min) { cost = tier.min; minApplied = true; }
-
-    if (calcPrice) {
-      calcPrice.innerHTML = "$" + cost.toFixed(0) + "<span>/mo</span>";
-    }
-    if (tierBadge) {
-      tierBadge.textContent = tier.name + " tier";
-    }
-    if (calcSub) {
-      if (tier.name === "Pro") {
-        calcSub.textContent = "Estimate at $2.89/unit — Pro is custom-quoted, contact us for an exact price.";
-      } else if (minApplied) {
-        calcSub.textContent = "$" + tier.rate.toFixed(2) + "/unit/mo, " + tier.min + "/mo minimum applied.";
-      } else {
-        calcSub.textContent = "$" + tier.rate.toFixed(2) + " per unit, per month.";
-      }
-    }
-    updateGridFill(units, 250);
-    return units;
-  }
-
-  if (unitsInput && unitsRange) {
-    buildGridPreview(50);
-    unitsInput.addEventListener("input", function () {
-      var v = runCalculator(this.value);
-      unitsRange.value = v;
-    });
-    unitsRange.addEventListener("input", function () {
-      unitsInput.value = this.value;
-      runCalculator(this.value);
-    });
-    runCalculator(unitsInput.value || 65);
-  }
-
-  /* ---------------- Contact form (front-end only) ---------------- */
-  var contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
+  /* ---------- Contact form (static — no backend wired up) ---------- */
+  var form = document.getElementById("demo-form");
+  if (form) {
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      if (!contactForm.checkValidity()) {
-        contactForm.reportValidity();
+      var status = document.getElementById("form-status");
+      if (!form.checkValidity()) {
+        form.reportValidity();
         return;
       }
-      var success = document.getElementById("formSuccess");
-      if (success) {
-        success.classList.add("is-visible");
-        success.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+      form.hidden = true;
+      if (status) {
+        status.hidden = false;
+        status.focus();
       }
-      contactForm.reset();
     });
   }
 })();
